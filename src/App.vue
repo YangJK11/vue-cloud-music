@@ -1,17 +1,17 @@
 <template>
   <v-app id="app">
-    <Header msg="Welcome to Your Vue.js App" fixed/>
+    <router-view></router-view>
   </v-app>
 </template>
 
 <script>
 
-import Header from './components/Header.vue'
+import Home from './components/Home.vue'
 
 export default {
   name: 'app',
   components: {
-    Header
+    Home
   }
 }
 </script>
@@ -23,6 +23,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  /* margin-top: 60px; */
 }
 </style>
