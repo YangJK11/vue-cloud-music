@@ -5,6 +5,7 @@ import Hot from './components/Hot.vue'
 import Search from './components/Search.vue'
 import Song from './components/Song.vue'
 import Home from './components/Home.vue'
+import PlayList from './components/PlayList.vue'
 
 const routes = [{
     path: '/',
@@ -25,6 +26,9 @@ const routes = [{
 }, {
     path: '/song',
     component: Song
+}, {
+    path: '/playlist',
+    component: PlayList
 }];
 
 const router = new VueRouter({
@@ -32,4 +36,4 @@ const router = new VueRouter({
     mode: 'history'
 });
 
-export default router
+export default router;

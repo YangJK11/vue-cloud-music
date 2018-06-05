@@ -19,7 +19,7 @@
         </v-alert>
         <div class="hot-list">
             <v-list>
-                <div v-for="(item, index) in top20Hots" :key="item.id">
+                <div v-for="(item, index) in top20Hots" :key="item.id" @click="goToSong(item.id)">
                     <v-list-tile avatar>
                         <v-list-tile-action>
                             <h1 :style="{ 'color': index < 3 ? 'red' : '#777777' }">{{index + 1}}</h1>
@@ -73,6 +73,9 @@ export default {
       .catch(error => {
         this.ok = false;
       });
+  },
+  methods: {
+
   }
 };
 </script>

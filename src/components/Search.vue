@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-flex xs10 offset-xs1>
-            <v-text-field @keyup.enter="search(keyword)" type="search" prepend-icon="search" v-model="keyword" flat clearable @input="getSuggestions(keyword)"></v-text-field>
+                <v-text-field @keyup.enter="search(keyword)" type="search" prepend-icon="search" v-model="keyword" flat clearable @input="getSuggestions(keyword)"></v-text-field>
         </v-flex>
         <div class="text-xs-center" v-if="!keyword">
             <v-subheader>热门搜索</v-subheader>
@@ -9,7 +9,7 @@
         </div>
         <div v-if="suggestions && keyword && !results">
             <v-list>
-                <v-list-tile v-for="item in suggestions.songs" :key="item.id">
+                <v-list-tile v-for="item in suggestions.songs" :key="item.id" @click="goToSong(item.id)">
                     <v-list-tile-content>
                         <v-list-tile-title>
                             <v-icon>search</v-icon> {{item.name + ' - ' +item.artists[0].name}}</v-list-tile-title>
@@ -21,7 +21,7 @@
         <div v-if="results && keyword">
             <div class="search-result">
                 <v-list>
-                    <div v-for="item in results" :key="item.id" @click="songsClick(item.id)">
+                    <div v-for="item in results" :key="item.id" @click="goToSong(item.id)">
                         <v-list-tile avatar>
                             <v-list-tile-content>
                                 <v-list-tile-title v-text="item.name"></v-list-tile-title>
@@ -31,7 +31,7 @@
                                 <img src="../assets/play.png" alt="" srcset="">
                             </v-list-tile-avatar>
                         </v-list-tile>
-                        <v-divider inset></v-divider>
+                        <v-divider></v-divider>
                     </div>
                 </v-list>
             </div>
@@ -70,9 +70,6 @@ export default {
       axios
         .get("http://47.106.119.139:3000/search?keywords=" + key)
         .then(response => (this.results = response.data.result.songs));
-    },
-    songsClick: function(id) {
-      console.log(id);
     }
   }
 };

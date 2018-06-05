@@ -3,7 +3,7 @@
         <h1>Search Result</h1>
         <div class="search-result">
             <v-list>
-                <div v-for="item in newSongs" :key="item.id">
+                <div v-for="item in newSongs" :key="item.id" @click="goToSong(item.id)">
                     <v-list-tile avatar>
                         <v-list-tile-content>
                             <v-list-tile-title v-text="item.name"></v-list-tile-title>
@@ -13,7 +13,7 @@
                             <img src="../assets/play.png" alt="" srcset="">
                         </v-list-tile-avatar>
                     </v-list-tile>
-                    <v-divider inset></v-divider>
+                    <v-divider></v-divider>
                 </div>
             </v-list>
         </div>

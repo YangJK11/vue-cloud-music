@@ -2,8 +2,6 @@ import Vue from 'vue'
 import Vuetify from 'vuetify'
 import VueRouter from 'vue-router'
 import App from './App.vue'
-import Home from './components/Home.vue'
-import Grid from './components/Grid.vue'
 import 'material-design-icons-iconfont/dist/material-design-icons.css' 
 import 'vuetify/dist/vuetify.css'
 import router from './router.js'
@@ -11,6 +9,8 @@ import router from './router.js'
 
 
 
+import Util from './util'
+Vue.use(Util);
 Vue.use(Vuetify);
 Vue.use(VueRouter);
 
