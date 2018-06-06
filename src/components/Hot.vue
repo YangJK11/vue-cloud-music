@@ -38,9 +38,6 @@
         </div>
         <div class="hot-bottom" v-if="ok">
             <v-card color="red" class="white--text">
-                <!-- <v-card-title primary-title>
-                    <div class="headline">开启音乐之旅</div>
-                </v-card-title> -->
                 <v-card-actions>
                     <v-btn flat dark>查看完整榜单</v-btn>
                 </v-card-actions>
@@ -71,12 +68,11 @@ export default {
         this.hots = response.data.playlist.tracks;
       })
       .catch(error => {
+          window.alert(error);
         this.ok = false;
       });
   },
-  methods: {
-
-  }
+  methods: {}
 };
 </script>
 
