@@ -1,14 +1,6 @@
 # Vue Cloud Music
 
-### 移动端网易云音乐
-
-
-
-API 来自[https://github.com/Binaryify/NeteaseCloudMusicApi]
-
-Vue + Vue Router + Vue CLI + Vuetify
-
-
+网易云音乐移动端
 
 ## 快速使用
 
@@ -46,9 +38,7 @@ npm run serve
 
   Material Design 的UI 组件
 
-
-
-### 功能
+## 功能 
 
 实现了[网易云音乐](http://music.163.com/)移动端的功能，包括：
 
@@ -71,3 +61,6 @@ npm run serve
 
   ……
 
+## API
+
+API来自GitHub [**NeteaseCloudMusicApi**](https://github.com/Binaryify/NeteaseCloudMusicApi)
