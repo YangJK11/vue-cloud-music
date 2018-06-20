@@ -2,6 +2,12 @@
 
 网易云音乐移动端
 
+![image-20180620182345504](/var/folders/qm/00f8gxrd5f12dfxdmknkxvz80000gn/T/abnerworks.Typora/image-20180620182345504.png)
+
+![image-20180620182415467](/var/folders/qm/00f8gxrd5f12dfxdmknkxvz80000gn/T/abnerworks.Typora/image-20180620182415467.png)
+
+![image-20180620182502382](/var/folders/qm/00f8gxrd5f12dfxdmknkxvz80000gn/T/abnerworks.Typora/image-20180620182502382.png)
+
 ## 快速使用
 
 ```bash
