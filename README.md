@@ -2,11 +2,9 @@
 
 网易云音乐移动端
 
-![image-20180620182345504](/var/folders/qm/00f8gxrd5f12dfxdmknkxvz80000gn/T/abnerworks.Typora/image-20180620182345504.png)
-
-![image-20180620182415467](/var/folders/qm/00f8gxrd5f12dfxdmknkxvz80000gn/T/abnerworks.Typora/image-20180620182415467.png)
-
-![image-20180620182502382](/var/folders/qm/00f8gxrd5f12dfxdmknkxvz80000gn/T/abnerworks.Typora/image-20180620182502382.png)
+![推荐音乐](https://ws3.sinaimg.cn/large/006tKfTcgy1fshtkw9kw1j30m817saxf.jpg)
+![热歌榜单](https://ws4.sinaimg.cn/large/006tKfTcgy1fshtlpfer4j30m618itdh.jpg)
+![搜索音乐](https://ws4.sinaimg.cn/large/006tKfTcgy1fshtm5xflwj30m618gq4r.jpg)
 
 ## 快速使用
 
