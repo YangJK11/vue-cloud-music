@@ -2,9 +2,13 @@
 
 网易云音乐移动端
 
-![推荐音乐](https://ws3.sinaimg.cn/large/006tKfTcgy1fshtkw9kw1j30m817saxf.jpg)
-![热歌榜单](https://ws4.sinaimg.cn/large/006tKfTcgy1fshtlpfer4j30m618itdh.jpg)
-![搜索音乐](https://ws4.sinaimg.cn/large/006tKfTcgy1fshtm5xflwj30m618gq4r.jpg)
+
+
+<img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fshtlpfer4j30m618itdh.jpg" width="240" align=center />
+<img src="https://ws3.sinaimg.cn/large/006tKfTcgy1fshtkw9kw1j30m817saxf.jpg" width="240" align=center />
+<img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fshtm5xflwj30m618gq4r.jpg" width="240" align=center />
+
+
 
 ## 快速使用
 
