@@ -59,15 +59,13 @@ export default {
         this.newSongs = response.data.result;
       })
       .catch(error => {
-        window.alert(error);
+        console.log(error);
       });
     axios
-      .get("http://47.106.119.139:3000/personalized")
-      .then(response => {
+      .get("http://47.106.119.139:3000/personalized").then(response => {
         this.recommendedList = response.data.result;
-      })
-      .catch(error => {
-         window.alert(error);
+      }).catch(error => {
+        console.log(error);
       });
   },
   components: {},

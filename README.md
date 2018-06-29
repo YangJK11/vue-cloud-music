@@ -11,7 +11,7 @@
 
 
 ## 快速使用
-
+请使用移动端调试模式访问
 ```bash
 # 克隆项目到本地
 git clone https://github.com/cnvp21/vue-cloud-music.git
@@ -67,8 +67,14 @@ npm run serve
 
 - 歌单播放次数
 
+- 播放界面美化
+
   ……
 
+
+
 ## API
+
+
 
 API来自GitHub [**NeteaseCloudMusicApi**](https://github.com/Binaryify/NeteaseCloudMusicApi)

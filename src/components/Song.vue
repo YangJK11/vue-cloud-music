@@ -11,6 +11,7 @@
                 </v-card>
                 <audio id="player" :src="song.url" controls></audio>
                 <v-flex xs12>
+                    <!-- TODO -->
                     <!-- custome play control to do  -->
                 </v-flex>
             </v-flex>
@@ -31,7 +32,7 @@ export default {
         url:
           "http://music.163.com/song/media/outer/url?id=" +
           this.$route.query.id +
-          ".mp3 "
+          ".mp3"
       },
       isPlaying: false
     };
@@ -44,9 +45,6 @@ export default {
         this.song.title = response.data.songs[0].name;
         this.song.pic = response.data.songs[0].al.picUrl;
       });
-  },
-  methods: {
-    
   }
 };
 </script>
