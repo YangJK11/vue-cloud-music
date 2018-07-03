@@ -69,6 +69,7 @@ npm run serve
 
 - 播放界面美化
 
+- 使用Vuex来管理状态
   ……
 
 
