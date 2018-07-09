@@ -9,7 +9,10 @@ import router from './router.js'
 
 
 
-import Util from './util'
+import Util from './util';
+import axios from 'axios';
+Vue.prototype.$ajax = axios;
+
 Vue.use(Util);
 Vue.use(Vuetify);
 Vue.use(VueRouter);

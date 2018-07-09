@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import axios from "axios";
+
 export default {
   data() {
     return {
@@ -51,13 +51,13 @@ export default {
     };
   },
   mounted() {
-    axios
+    this.$ajax
       .get("http://47.106.119.139:3000/search/hot")
       .then(response => (this.hots = response.data.result.hots));
   },
   methods: {
     getSuggestions: function(keyword) {
-      axios
+      this.$ajax
         .get("http://47.106.119.139:3000/search/suggest?keywords=" + keyword)
         .then(response => (this.suggestions = response.data.result));
       this.results = null;
@@ -67,7 +67,7 @@ export default {
       this.search(key);
     },
     search: function(key) {
-      axios
+      this.$ajax
         .get("http://47.106.119.139:3000/search?keywords=" + key)
         .then(response => (this.results = response.data.result.songs));
     }

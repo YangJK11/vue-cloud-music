@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import axios from "axios";
+// import axios from "axios";
 export default {
   data: function() {
     return {
@@ -52,7 +52,7 @@ export default {
     };
   },
   mounted() {
-    axios
+    this.$ajax
       .get(
         "http://47.106.119.139:3000/playlist/detail?id=" + this.$route.query.id
       )

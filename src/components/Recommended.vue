@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-subheader class="sub-title">推荐歌单</v-subheader>
+    <v-subheader class="sub-title" @click="saveLocalData('testKey', 'testValue')">推荐歌单</v-subheader>
 
     <v-content>
       <v-container grid-list-md>
@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import axios from "axios";
+// import axios from "axios";
 export default {
   name: "recommended",
   data() {
@@ -53,15 +53,17 @@ export default {
     }
   },
   mounted() {
-    axios
+    this.$ajax
       .get("http://47.106.119.139:3000/personalized/newsong")
       .then(response => {
+        // 存储在LocalStorage中
+        // local.saveLocalData('testKey', 'testValue');
         this.newSongs = response.data.result;
       })
       .catch(error => {
         console.log(error);
       });
-    axios
+    this.$ajax
       .get("http://47.106.119.139:3000/personalized").then(response => {
         this.recommendedList = response.data.result;
       }).catch(error => {
