@@ -12,7 +12,7 @@
                 <audio id="player" :src="song.url" controls></audio>
                 <v-flex xs12>
                     <!-- TODO -->
-                    <!-- custome play control to do  -->
+                    <!-- custome play control  -->
                 </v-flex>
             </v-flex>
         </v-layout>
@@ -21,7 +21,7 @@
 <script>
 document.getElementById("myVideo");
 
-import axios from "axios";
+
 
 export default {
   data: function() {
@@ -39,7 +39,7 @@ export default {
   },
   methods: {},
   mounted() {
-    axios
+    this.$ajax
       .get("http://47.106.119.139:3000/song/detail?ids=" + this.$route.query.id)
       .then(response => {
         this.song.title = response.data.songs[0].name;

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="hot-top" v-if="ok">
+        <div class="hot-top">
             <v-card color="red" class="white--text">
                 <v-container fluid grid-list-lg>
                     <v-layout row>
@@ -15,7 +15,7 @@
             <v-divider></v-divider>
         </div>
         <v-alert :value="!ok" type="error">
-            数据加载失败
+            最新数据加载失败 为您展示本地数据
         </v-alert>
         <div class="hot-list">
             <v-list>
@@ -36,7 +36,7 @@
                 </div>
             </v-list>
         </div>
-        <div class="hot-bottom" v-if="ok">
+        <div class="hot-bottom">
             <v-card color="red" class="white--text">
                 <v-card-actions>
                     <v-btn flat dark>查看完整榜单</v-btn>
@@ -47,39 +47,38 @@
 </template>
 
 <script>
-// import axios from "axios";
-export default {
-  data() {
-    return {
-      hots: [],
-      ok: true
+    export default {
+        data() {
+            return {
+                hots: [],
+                ok: true
+            };
+        },
+        computed: {
+            top20Hots: function () {
+                return this.hots.slice(0, 20);
+            }
+        },
+        mounted() {
+            this.$ajax
+                .get("http://47.106.119.139:3000/top/list?idx=1")
+                .then(response => {
+                    this.ok = true;
+                    this.$local.saveLocalData('hotSongs', response.data.playlist.tracks);                    
+                })
+                .catch(error => {
+                    this.ok = false;
+                }).finally(() => {
+                    this.hots = this.$local.fetchLocalData('hotSongs');
+                });
+        },
+        methods: {}
     };
-  },
-  computed: {
-    top20Hots: function() {
-      return this.hots.slice(0, 20);
-    }
-  },
-  mounted() {
-    this.$ajax
-      .get("http://47.106.119.139:3000/top/list?idx=1")
-      .then(response => {
-        this.ok = true;
-        this.hots = response.data.playlist.tracks;
-      })
-      .catch(error => {
-          window.alert(error);
-        this.ok = false;
-      });
-  },
-  methods: {}
-};
 </script>
 
 <style scoped>
-.hot-top {
-  width: 100%;
-  height: 85px;
-}
+    .hot-top {
+        width: 100%;
+        height: 64px;
+    }
 </style>
-

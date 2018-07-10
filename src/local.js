@@ -1,11 +1,11 @@
 export default {
     saveLocalData(key, value) {
         console.log('save local data');
-        window.localStorage.setItem(key, value);
+        window.localStorage.setItem(key, JSON.stringify(value));
     },
 
     fetchLocalData(key) {
-        console.log('fetch local data');
-        window.localStorage.getItem(key);
+        
+        return JSON.parse(window.localStorage.getItem(key));
     }
 }

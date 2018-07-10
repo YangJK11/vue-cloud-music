@@ -11,7 +11,10 @@ import router from './router.js'
 
 import Util from './util';
 import axios from 'axios';
+import local from './local';
 Vue.prototype.$ajax = axios;
+Vue.prototype.$local = local;
+
 
 Vue.use(Util);
 Vue.use(Vuetify);
